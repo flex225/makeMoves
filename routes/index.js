@@ -6,7 +6,7 @@ const withBody = bodyParser.json()
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express', error: '', success: '' })
+  res.render('index', { title: 'Make Moves', error: '', success: '' })
 })
 
 router.post('/', withBody, async function (req, res, next) {
@@ -41,7 +41,7 @@ router.post('/', withBody, async function (req, res, next) {
 
   res.render('index', {
     error: '',
-    title: 'Express',
+    title: 'Make Moves',
     success: 'Your order successfully submited',
   })
 })
