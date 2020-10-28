@@ -2,20 +2,31 @@
 <html>
   <head>
     <title><%= title %></title>
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="./images/favicon.ico"/>
     <link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
     <link rel="stylesheet" href="./stylesheets/style.css" />
 
     <script src="./javascript/bootstrap.min.js"></script>
+    <style>
+      body {
+        padding-top: 0px;
+      }
+      form {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <form
-      class="text-center border border-light p-5" 
       id="form" 
       action="/" 
       method="post"
     >
+    <div class="title">
+      <img src="./images/make_moves.jpg" width="150" height="150"/>
       <p class="h4 mb-4">Make Moves</p>
+    </div>
 
       <% if (error) { %>
         <div class="alert alert-danger" role="alert">
@@ -53,13 +64,7 @@
         oninvalid="this.setCustomValidity('Product size field required')"
         oninput="this.setCustomValidity('')" 
       />
-      <!-- <small
-        id="defaultRegisterFormPasswordHelpBlock"
-        class="form-text text-muted mb-4"
-      >
-        At least 8 characters and 1 digit
-      </small> -->
-
+      
       <label>Contact details</label>
       <input
         name="name"
