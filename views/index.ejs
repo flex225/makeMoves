@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <script src="./javascript/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form
+      class="text-center border border-light p-5" 
+      id="form" 
+      action="/" 
+      method="post"
+    >
+      <p class="h4 mb-4">Make Moves</p>
+
+      <% if (error) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= success %>
+        </div>
+        <% } %>
+
+      <% if (success) { %>
+        <div class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+      <% } %>
+
+      <label>Product Details</label>
+      <input
+        name="product"
+        type="text"
+        id="product"
+        class="form-control mb-4"
+        placeholder="Product"
+        aria-describedby="productAria"
+        required
+        oninvalid="this.setCustomValidity('Product field required')"
+        oninput="this.setCustomValidity('')" 
+      />        
+
+      <input
+        name="productSize"
+        type="text"
+        id="productSize"
+        class="form-control mb-4"
+        placeholder="Product size"
+        aria-describedby="productAria"
+        required
+        oninvalid="this.setCustomValidity('Product size field required')"
+        oninput="this.setCustomValidity('')" 
+      />
+      <!-- <small
+        id="defaultRegisterFormPasswordHelpBlock"
+        class="form-text text-muted mb-4"
+      >
+        At least 8 characters and 1 digit
+      </small> -->
+
+      <label>Contact details</label>
+      <input
+        name="name"
+        type="text"
+        id="name"
+        class="form-control mb-4"
+        placeholder="Full name"
+        required
+        oninvalid="this.setCustomValidity('Name field required')"
+        oninput="this.setCustomValidity('')" 
+      />
+
+      <input
+        type="text"
+        id="phoneNumber"
+        name="phoneNumber"
+        class="form-control mb-4"
+        placeholder="Phone number"
+        aria-describedby="phoneNumberAria"
+        required
+        oninvalid="this.setCustomValidity('Phone number field required')"
+        oninput="this.setCustomValidity('')" 
+      />
+
+      <input
+        type="text"
+        name="address"
+        id="address"
+        class="form-control mb-4"
+        placeholder="Address"
+        aria-describedby="addressAria"
+        required
+        oninvalid="this.setCustomValidity('Address field required')"
+        oninput="this.setCustomValidity('')" 
+      />
+      <div class="form-row mb-4">
+        <div class="col-3 my-auto">
+          <label for="time"">Deliver time</label>
+        </div>
+        <div class="col">
+          <input
+            placeholder="Choose order time"
+            type="time"
+            id="time"
+            class="form-control mb-4 my-auto"
+            name="time"
+            aria-describedby="addressAria"
+            required
+            oninvalid="this.setCustomValidity('Deliver time field required')"
+            oninput="this.setCustomValidity('')" 
+          />
+        </div>
+    </div>
+      <!-- Sign up button -->
+      <button class="btn btn-info my-4 btn-block" type="submit" id="btnSubmit">Submit</button>
+  </body>
+</html>

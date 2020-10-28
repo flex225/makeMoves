@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Login Example</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+
+    <script src="./javascript/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <form
+          action="/admin/login"
+          method="post"
+          name="Login_Form"
+          class="form-signin"
+        >
+          <h3 class="form-signin-heading">Make Moves</h3>
+          <% if (error) { %>
+          <h5 class="error"><%= error %></h5>
+          <% } %>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            placeholder="Username"
+            required=""
+            autofocus=""
+          />
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            required=""
+          />
+
+          <button
+            class="btn btn-lg btn-primary btn-block"
+            name="Submit"
+            value="Login"
+            type="Submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

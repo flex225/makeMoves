@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-color: white;
+}
+
+a {
+  color: #00b7ff;
+}
+
+#form {
+  margin: auto;
+  max-width: 600px;
+}
